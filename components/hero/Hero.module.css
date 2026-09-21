@@ -1,0 +1,50 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 25px);
+  /* background-color: #76806a; */
+  overflow: hidden;
+  min-height: 720px;
+  background-image: url('/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.brand {
+  position: absolute;
+  top: 72px;
+  left: 52px;
+  display: flex;
+  flex-direction: column;
+
+  color: var(--color-white);
+}
+
+.word {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.rule {
+  width: 32px;
+  height: 3px;
+  background: currentColor;
+
+  margin: 10px 0;
+}
+
+.needsRow {
+  display: flex;
+  align-items: flex-start;
+}
+
+.registered {
+  font-size: 15px;
+  line-height: 1;
+
+  margin-top: 5px;
+  margin-left: 4px;
+}

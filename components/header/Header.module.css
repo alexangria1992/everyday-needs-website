@@ -1,0 +1,34 @@
+.header {
+  position: absolute;
+  /* border: 1px solid lime; */
+  top: 0;
+  left: 0;
+  height: 72px;
+  z-index: 10;
+  width: 100%;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.primaryNav,
+.utilityNav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.primaryNav {
+  margin-left: 290px;
+}
+
+.header a {
+  color: inherit;
+  text-decoration: none;
+
+  font-size: var(--text-nav);
+  line-height: var(--text-nav-line-height);
+  letter-spacing: 0.26px;
+}
