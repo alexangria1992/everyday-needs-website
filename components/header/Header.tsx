@@ -1,12 +1,24 @@
 import styles from './Header.module.css';
 
-const Header = () => {
+type MenuName = 'shop' | 'collections' | 'makers';
+
+type HeaderProps = {
+  menuOpen: boolean;
+  onMenuEnter: (menu: MenuName) => void;
+};
+const Header = ({ menuOpen, onMenuEnter }: HeaderProps) => {
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${menuOpen ? styles.menuOpen : ''}`}>
       <nav className={styles.primaryNav}>
-        <a href='#'>Shop</a>
-        <a href='#'>Collections</a>
-        <a href='#'>The Makers</a>
+        <a href='#' onMouseEnter={() => onMenuEnter('shop')}>
+          Shop
+        </a>
+        <a href='#' onMouseEnter={() => onMenuEnter('collections')}>
+          Collections
+        </a>
+        <a href='#' onMouseEnter={() => onMenuEnter('makers')}>
+          The Makers
+        </a>
         <a href='#'>The Journal</a>
         <a href='#'>Loyalty</a>
       </nav>

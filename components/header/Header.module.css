@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: relative;
   /* border: 1px solid lime; */
   top: 0;
   left: 0;
@@ -31,4 +31,16 @@
   font-size: var(--text-nav);
   line-height: var(--text-nav-line-height);
   letter-spacing: 0.26px;
+}
+
+.menuOpen {
+  /* color: red; */
+}
+
+.navShell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }

@@ -5,10 +5,12 @@
   /* background-color: #76806a; */
   overflow: hidden;
   min-height: 720px;
-  background-image: url('/images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
 .brand {
@@ -29,11 +31,10 @@
 }
 
 .rule {
-  width: 32px;
+  width: 30px;
   height: 3px;
   background: currentColor;
-
-  margin: 10px 0;
+  margin: 9px 0;
 }
 
 .needsRow {
@@ -42,9 +43,8 @@
 }
 
 .registered {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1;
-
-  margin-top: 5px;
-  margin-left: 4px;
+  margin-top: 16px;
+  margin-left: 3px;
 }
