@@ -49,3 +49,40 @@
 .featureCard p {
   margin: 0;
 }
+
+.makersContent {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 48px;
+  padding: 72px 42px 48px;
+}
+
+.makerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.makerGroup {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  column-gap: 10px;
+  align-items: start;
+}
+
+.makerLetter {
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.makerLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.makerLinks a {
+  font-size: 13px;
+  line-height: 25px;
+  color: inherit;
+  text-decoration: none;
+}

@@ -18,9 +18,13 @@ const Hero = () => {
         priority
         className={styles.heroImage}
       />
-      {activeMenu && <MegaMenu activeMenu={activeMenu} />}
       <div className={styles.navShell} onMouseLeave={() => setActiveMenu(null)}>
-        <Header menuOpen={activeMenu !== null} onMenuEnter={setActiveMenu} />
+        {activeMenu && <MegaMenu activeMenu={activeMenu} />}
+        <Header
+          menuOpen={activeMenu !== null}
+          onMenuEnter={setActiveMenu}
+          activeMenu={activeMenu}
+        />
       </div>
       <div className={styles.brand}>
         <span className={styles.rule}></span>

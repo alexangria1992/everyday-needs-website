@@ -5,18 +5,31 @@ type MenuName = 'shop' | 'collections' | 'makers';
 type HeaderProps = {
   menuOpen: boolean;
   onMenuEnter: (menu: MenuName) => void;
+  activeMenu: MenuName | null;
 };
-const Header = ({ menuOpen, onMenuEnter }: HeaderProps) => {
+const Header = ({ menuOpen, onMenuEnter, activeMenu }: HeaderProps) => {
   return (
     <header className={`${styles.header} ${menuOpen ? styles.menuOpen : ''}`}>
       <nav className={styles.primaryNav}>
-        <a href='#' onMouseEnter={() => onMenuEnter('shop')}>
+        <a
+          className={activeMenu === 'shop' ? styles.active : ''}
+          href='#'
+          onMouseEnter={() => onMenuEnter('shop')}
+        >
           Shop
         </a>
-        <a href='#' onMouseEnter={() => onMenuEnter('collections')}>
+        <a
+          className={activeMenu === 'collections' ? styles.active : ''}
+          href='#'
+          onMouseEnter={() => onMenuEnter('collections')}
+        >
           Collections
         </a>
-        <a href='#' onMouseEnter={() => onMenuEnter('makers')}>
+        <a
+          className={activeMenu === 'makers' ? styles.active : ''}
+          href='#'
+          onMouseEnter={() => onMenuEnter('makers')}
+        >
           The Makers
         </a>
         <a href='#'>The Journal</a>
