@@ -8,6 +8,7 @@ import BackInStock from '@/components/back-in-stock/BackInStock';
 import localFont from 'next/font/local';
 import Journal from '@/components/journal/Journal';
 import VisitStore from '@/components/visit-store/VisitStore';
+import Instagram from '@/components/instagram/Instagram';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <BackInStock />
       <Journal />
       <VisitStore />
+      <Instagram />
     </main>
   );
 }
