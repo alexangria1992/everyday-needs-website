@@ -1,0 +1,48 @@
+.section {
+  margin-top: 80px;
+
+  display: grid;
+  grid-template-columns: 422px 240px;
+  column-gap: 205px;
+
+  /* justify-content: center; */
+  padding-left: 15.5vw;
+  padding-right: 30px;
+  padding-bottom: 160px;
+
+  padding-bottom: 160px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.67;
+  overflow: hidden;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.content p {
+  margin: 38px 0 0;
+  width: 240px;
+
+  font-size: 13px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.content a {
+  display: inline-block;
+  margin-top: 34px;
+
+  color: inherit;
+  font-size: 13px;
+  line-height: 22px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
