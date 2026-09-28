@@ -4,7 +4,7 @@ import Header from '@/components/header/Header';
 import Hero from '@/components/hero/Hero';
 import LatestArrivals from '@/components/latest-arrivals/LatestArrivals';
 import SpringRefresh from '@/components/spring-refresh/SpringRefresh';
-
+import BackInStock from '@/components/back-in-stock/BackInStock';
 import localFont from 'next/font/local';
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
       <Hero />
       <LatestArrivals />
       <SpringRefresh />
+      <BackInStock />
     </main>
   );
 }
