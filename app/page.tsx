@@ -9,6 +9,7 @@ import localFont from 'next/font/local';
 import Journal from '@/components/journal/Journal';
 import VisitStore from '@/components/visit-store/VisitStore';
 import Instagram from '@/components/instagram/Instagram';
+import Footer from '@/components/footer/Footer';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Journal />
       <VisitStore />
       <Instagram />
+      <Footer />
     </main>
   );
 }
