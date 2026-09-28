@@ -1,0 +1,93 @@
+.section {
+  border: 1px solid red;
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: 320px 422px;
+  column-gap: 122px;
+
+  padding: 0 30px 180px 16.3vw;
+}
+
+.intro h2,
+.feature h3,
+.intro p,
+.feature p {
+  margin: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+.intro h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.copy {
+  margin-top: 82px;
+  max-width: 240px;
+}
+
+.copy p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: 0.3px;
+}
+
+.copy p + p {
+  margin-top: 40px;
+}
+
+.journalButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 38px;
+  margin-top: 80px;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.category {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Neue', sans-serif;
+}
+
+.feature h3 {
+  margin: 0 0 18px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.feature .credit {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.feature > a {
+  display: inline-block;
+  margin-top: 6px;
+
+  color: inherit;
+  font-size: 13px;
+  line-height: 22px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -6,6 +6,8 @@ import LatestArrivals from '@/components/latest-arrivals/LatestArrivals';
 import SpringRefresh from '@/components/spring-refresh/SpringRefresh';
 import BackInStock from '@/components/back-in-stock/BackInStock';
 import localFont from 'next/font/local';
+import Journal from '@/components/journal/Journal';
+import VisitStore from '@/components/visit-store/VisitStore';
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <LatestArrivals />
       <SpringRefresh />
       <BackInStock />
+      <Journal />
+      <VisitStore />
     </main>
   );
 }
