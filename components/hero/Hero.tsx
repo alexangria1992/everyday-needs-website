@@ -8,7 +8,14 @@ import MegaMenu from '../mega-menu/MegaMenu';
 type MenuName = 'shop' | 'collections' | 'makers';
 
 const Hero = () => {
-  const [activeMenu, setActiveMenu] = useState<MenuName | null>(null);
+  const [activeMenu, setActiveMenu] = useState<MenuName>('shop');
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuEnter = (menu: MenuName) => {
+    setActiveMenu(menu);
+    setMenuOpen(true);
+  };
+
   return (
     <section className={styles.hero}>
       <Image
@@ -18,12 +25,13 @@ const Hero = () => {
         priority
         className={styles.heroImage}
       />
-      <div className={styles.navShell} onMouseLeave={() => setActiveMenu(null)}>
-        {activeMenu && <MegaMenu activeMenu={activeMenu} />}
+      <div className={styles.navShell} onMouseLeave={() => setMenuOpen(false)}>
+        <MegaMenu activeMenu={activeMenu} menuOpen={menuOpen} />
         <Header
-          menuOpen={activeMenu !== null}
-          onMenuEnter={setActiveMenu}
-          activeMenu={activeMenu}
+          menuOpen={menuOpen}
+          onMenuEnter={handleMenuEnter}
+          activeMenu={menuOpen ? activeMenu : null}
+          onMenuClose={() => setMenuOpen(false)}
         />
       </div>
       <div className={styles.brand}>

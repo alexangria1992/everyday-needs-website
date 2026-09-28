@@ -6,8 +6,14 @@ type HeaderProps = {
   menuOpen: boolean;
   onMenuEnter: (menu: MenuName) => void;
   activeMenu: MenuName | null;
+  onMenuClose: () => void;
 };
-const Header = ({ menuOpen, onMenuEnter, activeMenu }: HeaderProps) => {
+const Header = ({
+  menuOpen,
+  onMenuEnter,
+  activeMenu,
+  onMenuClose,
+}: HeaderProps) => {
   return (
     <header className={`${styles.header} ${menuOpen ? styles.menuOpen : ''}`}>
       <nav className={styles.primaryNav}>
@@ -32,8 +38,20 @@ const Header = ({ menuOpen, onMenuEnter, activeMenu }: HeaderProps) => {
         >
           The Makers
         </a>
-        <a href='#'>The Journal</a>
-        <a href='#'>Loyalty</a>
+        <a
+          href='#'
+          onMouseEnter={onMenuClose}
+          className={styles.hoverUnderline}
+        >
+          The Journal
+        </a>
+        <a
+          href='#'
+          onMouseEnter={onMenuClose}
+          className={styles.hoverUnderline}
+        >
+          Loyalty
+        </a>
       </nav>
       <nav className={styles.utilityNav} aria-label='Utility navigation'>
         <a href='#'>Search</a>

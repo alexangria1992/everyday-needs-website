@@ -130,10 +130,11 @@ type MenuName = 'shop' | 'collections' | 'makers';
 
 type MegaMenuProps = {
   activeMenu: MenuName;
+  menuOpen: boolean;
 };
-const MegaMenu = ({ activeMenu }: MegaMenuProps) => {
+const MegaMenu = ({ activeMenu, menuOpen }: MegaMenuProps) => {
   return (
-    <div className={styles.megaMenu}>
+    <div className={`${styles.megaMenu} ${menuOpen ? styles.open : ''}`}>
       {activeMenu === 'shop' && (
         <div className={styles.content}>
           <div className={styles.utilityColumn}>

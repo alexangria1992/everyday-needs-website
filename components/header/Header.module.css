@@ -20,6 +20,33 @@
   gap: 28px;
 }
 
+.primaryNav a {
+  position: relative;
+}
+
+.primaryNav a::after {
+  position: absolute;
+  content: '';
+
+  left: 0;
+  bottom: 2px;
+
+  width: 100%;
+  height: 1px;
+
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.primaryNav a.active::after {
+  opacity: 1;
+}
+
+.primaryNav a.hoverUnderline:hover::after {
+  background: white;
+  opacity: 1;
+}
 .primaryNav {
   margin-left: 290px;
 }
@@ -35,6 +62,7 @@
 
 .menuOpen {
   /* color: red; */
+  color: var(--color-black);
 }
 
 .navShell {
